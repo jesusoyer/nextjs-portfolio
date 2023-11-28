@@ -1,21 +1,16 @@
-import Homepage from "../components/homepage";
+import Homepage from "../components/Homepage";
 import Navbar from "../components/Navbar";
+import Footer from "@/components/Footer";
+
 
 export default function home() {
   return (
    <main>
     <Navbar />
     <Homepage />
-    <ul>
-      <li>welcome</li>
-      <li>about</li>
-      <li>projects preview link</li>
-      
-    </ul>
-    <footer>footer goes here
-      <ul>some social media links</ul>
-      <ul>some general info</ul>
-    </footer>
+    
+    <Footer />
    </main>
+   
   )
 }
