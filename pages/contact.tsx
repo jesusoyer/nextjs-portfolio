@@ -1,10 +1,11 @@
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
+import ContactPage from "@/components/ContactPage";
 export default function contacts() {
   return (
    <main>
     <Navbar />
-   <div>this is the contacts page</div>
+   <ContactPage />
    <Footer />
    </main>
   )
