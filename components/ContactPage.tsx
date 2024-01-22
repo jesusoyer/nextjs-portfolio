@@ -37,28 +37,27 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://3.82.151.217:5001/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+        const response = await fetch('/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
 
-      if (response.ok) {
-        console.log('Form submitted successfully!');
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000);
-        // Optionally, reset the form or redirect the user.
-      } else {
-        console.error('Form submission failed.', response.body);
-      }
+        if (response.ok) {
+            console.log('Form submitted successfully!');
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+            // Optionally, reset the form or redirect the user.
+        } else {
+            console.error('Form submission failed.', await response.text());
+        }
     } catch (error) {
-      console.error('An error occurred during form submission:', error);
+        console.error('An error occurred during form submission:', error);
     }
-  };
-
+};
     return (
         <div className="container my-52 mx-auto md:px-6">
   {/* <!-- Section: Design Block --> */}
