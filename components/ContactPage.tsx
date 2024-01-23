@@ -37,13 +37,14 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-        const response = await fetch('/submit-form', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
+      const response = await fetch('https://3.82.151.217:5001/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
 
         if (response.ok) {
             console.log('Form submitted successfully!');
