@@ -37,7 +37,7 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://3.82.151.217:5001/submit-form', {
+      const response = await fetch('https://3.82.151.217:5001/submit-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
