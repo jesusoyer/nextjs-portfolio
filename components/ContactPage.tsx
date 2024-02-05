@@ -92,6 +92,9 @@ export default function contactPage() {
             </svg>
             <h6 className="font-medium text-white ">GitHub</h6>
             </a>
+           
+
+
           </div>
           
           <div className="mx-auto mb-6 text-center md:mb-0">
@@ -117,8 +120,18 @@ export default function contactPage() {
             </svg>
             <h6 className="font-medium text-white text-sm">oyervidesjesus017@gmail.com</h6>
             </a>
+      
           </div>
+         
         </div>
+        <div>
+        <a
+    href="/JesusOyervidesSoftwareEngineerupdate.pdf"
+    alt="download resume"
+    target="_blank"
+    rel="noopener noreferrer"
+    className='text-white  mx-72 hover:underline'
+  >Download Resume</a></div>
         <div className="mx-auto max-w-[700px]">
           <h1 className="text-white mb-2">Send Me a message</h1>
           <form onSubmit={handleSubmit}>
