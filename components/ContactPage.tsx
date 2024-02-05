@@ -125,13 +125,10 @@ export default function contactPage() {
          
         </div>
         <div>
-        <a
-    href="/JesusOyervidesSoftwareEngineerupdate.pdf"
-    alt="download resume"
-    target="_blank"
-    rel="noopener noreferrer"
-    className='text-white  mx-72 hover:underline'
-  >Download Resume</a></div>
+        
+    <a href="/JesusOyervidesSoftwareEngineerupdate.pdf" target="_blank" rel="noopener noreferrer" className="text-white mx-72 hover:underline">
+    Download Resume
+</a></div>
         <div className="mx-auto max-w-[700px]">
           <h1 className="text-white mb-2">Send Me a message</h1>
           <form onSubmit={handleSubmit}>
