@@ -148,7 +148,7 @@ export default function contactPage() {
               </div>
               <div className="mx-auto text-center">
                 <a
-                  href="mailto:oyervidesjesus017@gmail.com"
+                  href="mailto:jesusoyervidesinfo@gmail.com"
                   target="_blank"
                   className="text-gray-400 hover:text-gray-500"
                 >
@@ -167,7 +167,7 @@ export default function contactPage() {
                     />
                   </svg>
                   <h6 className="font-medium text-white text-sm">
-                    oyervidesjesus017@gmail.com
+                    jesusoyervidesinfo@gmail.com
                   </h6>
                 </a>
               </div>
