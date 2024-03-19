@@ -39,19 +39,18 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/send", {
+      const response = await fetch("https://w7poiz4yv9.execute-api.us-east-2.amazonaws.com/prod/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
-      console.log(formData);
+    
       if (response.ok) {
         console.log("Form submitted successfully!");
         toast.success(
-          `Hey ${formData.name}, your message was sent succesfully!`
+          `Hey ${formData.name}, your message was sent successfully!`
         );
         setTimeout(() => {
           window.location.reload();
