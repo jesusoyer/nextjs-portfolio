@@ -39,7 +39,7 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://gopnosc9w2.execute-api.us-east-2.amazonaws.com/prod/send", {
+      const response = await fetch("https://gopnosc9w2.execute-api.us-east-2.amazonaws.com/prod/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
