@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import hispanicHackers from "../public/HispanicHackers.png";
 import TicTacToe from "../public/Tic tac toe image.png";
+import investmentCalc from "../public/InvestmentCalc.png";
 
 import ContructionImage from "../public/constructionImage.jpg";
 export default function Homepage() {
@@ -27,7 +28,7 @@ export default function Homepage() {
   <div className="p-6">
     <h5 className="mb-4 text-lg text-white font-bold">Hispanic Hackers</h5>
     <p className="mb-6 text-white">I volunteered to help revamp the website for the local Hispanic Hackers nonprofit. They made the switch from React JS to Next JS for their website. I teamed up with four awesome individuals, and my focus was the landing page. I built the layout from the ground up, adding in some cool conditional rendering inspired by a Figma design. Check out the final product by clicking the link below!</p>
-    <a href="https://www.hispanichackers.com/" target="_blank" rel="noopener noreferrer" className="inline-block rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md">To Hispanic Hacker website</a>
+    <Link href="https://www.hispanichackers.com/" target="_blank" rel="noopener noreferrer" className="inline-block rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md">To Hispanic Hacker website</Link>
   </div>
 </div>
 
@@ -76,7 +77,7 @@ export default function Homepage() {
                 deeper understanding of React fundamentals and gained practical
                 insights into building functional and engaging web-based games.
               </p>
-              <a
+              <Link
                 href="https://main.dd8lletq4lb3y.amplifyapp.com/"
                 target="_blank" rel="noopener noreferrer"
                 data-te-ripple-init
@@ -84,7 +85,7 @@ export default function Homepage() {
                 className="inline-block rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
               >
                 To React Tik-Tac-Toe
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -95,7 +96,7 @@ export default function Homepage() {
               data-te-ripple-color="light"
             >
               <Image
-                src={ContructionImage}
+                src={investmentCalc}
                 alt="construction image"
                 className="w-full rounded-t-lg"
               />
@@ -111,30 +112,18 @@ export default function Homepage() {
               </svg>
             </div>
             <div className="p-6">
-              <h5 className="mb-4 text-lg text-white font-bold">Coming Soon</h5>
+              <h5 className="mb-4 text-lg text-white font-bold">Investment Calculator</h5>
               <p className="mb-6 text-white">
-                In the quiet corridors of creation, my upcoming project awaits
-                its moment to unfurl, like a story poised to be told. With every
-                keystroke and design choice, it breathes life into a vision that
-                transcends the ordinary. The meticulous crafting of code and
-                concept is akin to the careful strokes of an artist’s brush.
-                This project is a living canvas, a culmination of ideas
-                converging into a digital symphony. As the finishing touches
-                fall into place, the excitement intensifies, promising a
-                revelation that blurs the lines between innovation and
-                imagination. Soon, this endeavor will step into the spotlight,
-                inviting the world to witness the fusion of pixels and purpose.
-                Stay tuned for the unveiling, where a tapestry of creativity
-                unfolds, and the boundaries of possibility are redefined.
+              I developed a React.js application designed to forecast investment returns by computing key metrics such as initial investment, annual investment, expected return, and investment duration. The application utilizes a userInput state to store user-provided information, which is then leveraged for calculations. Additionally, I seamlessly passed user data between components using props. Furthermore, I implemented JavaScript functions capable of accurately computing and monitoring investment returns based on the user's input.
               </p>
-              <a
-                href="#!"
+              <Link
+                href="https://main.d1r08ii8kqipne.amplifyapp.com/"
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 className="inline-block rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
           <div className="block rounded-lg bg-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">

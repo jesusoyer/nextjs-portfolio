@@ -1,6 +1,7 @@
 import comingSoon from "../public/comingSoon.jpg";
 import hispanicHackers from "../public/HispanicHackers.png";
-import TicTacToe from "../public/Tic tac toe image.png"
+import TicTacToe from "../public/Tic tac toe image.png";
+import investCalc from "../public/InvestmentCalc.png";
 import Image from "next/image";
 export default function HomeProjects() {
   return (
@@ -84,7 +85,7 @@ export default function HomeProjects() {
           <div className="flex flex-wrap items-center">
             <div className="block w-full shrink-0 grow-0 basis-auto md:w-4/12 lg:flex">
               <Image
-                src={comingSoon}
+                src={investCalc}
                 alt="coming soon"
                 className="w-full rounded-t-lg md:rounded-tr-none md:rounded-bl-lg"
               />
@@ -92,24 +93,21 @@ export default function HomeProjects() {
             <div className="w-full shrink-0 grow-0 basis-auto md:w-8/12">
               <div className="px-6 py-12 md:px-12">
                 <h2 className="mb-6 text-3xl text-white font-bold">
-                  <span className="text-white ">"coming soon"</span> project
+                  <span className="text-white ">Investment Calculator</span> 
                 </h2>
                 <p className="mb-6 pb-2 text-white dark:text-neutral-300">
-                  Baby, if I give it my all, will it pay off? Working overtime,
-                  no days off All these shooting stars in the dark All these
-                  shooting stars in the dark Make a wish Taking
-                  off from the ground, it's amazing So outta this world, I'm in
-                  space, now I'm going up Headin' to the stars Wouldn't trade it
-                  out for another life, no
+                I developed a React.js application designed to forecast investment returns by computing key metrics such as initial investment, annual investment, expected return, and investment duration. The application utilizes a userInput state to store user-provided information, which is then leveraged for calculations. Additionally, I seamlessly passed user data between components using props. Furthermore, I implemented JavaScript functions capable of accurately computing and monitoring investment returns based on the user's input.
                 </p>
                 <button
                   type="button"
                   className="inline-block rounded-full bg-white px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
-                 
+                  onClick={() => {
+                    window.open('https://main.d1r08ii8kqipne.amplifyapp.com/','_blank'); 
+                  }}
                 >
-                  Learn more
+                  To Investment Calculator
                 </button>
               </div>
             </div>
