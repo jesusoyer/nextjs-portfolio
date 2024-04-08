@@ -3,7 +3,7 @@ import HomeProjects from "./HomepageProjects";
 
 export default function homepage() {
     return (
-     <section>
+     <section className="relative">
       <Hero />
       <HomeProjects />
     </section>

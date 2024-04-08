@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function Homepage() {
+export default function OtherNavbar() {
   // Add state to manage the visibility of the dropdown menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -11,7 +11,7 @@ export default function Homepage() {
   };
 
   return (
-    <nav className="bg-black border-gray-200 dark:bg-gray-900">
+    <nav className="bg-black  absolute top-0 left-0 w-full z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jesus Oyervides</span>
@@ -30,12 +30,13 @@ export default function Homepage() {
           </svg>
         </button>
         <div className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`} id="navbar-default">
-          <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <Link href="/" className="text-white bg-black block py-2 px-3 text-gray-900 rounded-t-lg   hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent">Home
+          <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+          <Link href="/" className="text-white bg-black block py-2 px-3 rounded-t-lg   hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white   md:dark:hover:bg-transparent">Home
             </Link>
-            <Link href="/projects" className="text-white bg-black block py-2 px-3 text-gray-900  hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent">Projects
+            <Link href="/projects" className="text-white bg-blackblock py-2 px-3  hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 md:dark:hover:bg-transparent">Projects
             </Link>
-            <Link href="/contact" className="bg-black text-white block py-2 px-3 text-gray-900 rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
+            <Link href="/contact" className="bg-black text-white block py-2 px-3  rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0  dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Contact
             </Link>
           </div>
         </div>

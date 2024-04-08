@@ -8,13 +8,13 @@ export default function HomeProjects() {
     <div className="container mx-auto md:px-6">
       {/* Section: Design Block */}
       <section className="mb-10 text-center md:text-left">
-        <div className="block rounded-lg bg-black text-white dark:bg-neutral-700">
+        <div className="block shadow-lg p-4 bg-gray-100 text-black dark:bg-neutral-700">
           <div className="flex flex-wrap items-center">
             <div className="block w-full shrink-0 grow-0 basis-auto md:w-4/12 lg:flex">
               <Image
                 src={hispanicHackers}
                 alt="hispanic hackers"
-                className="w-full  rounded mt-10 ml-1 md:ml-5 md:mt-0 md:rounded md:rounded"
+                className="w-full  shadow-lg "
               />
             </div>
             <div className="w-full shrink-0 grow-0 basis-auto md:w-8/12">
@@ -25,12 +25,12 @@ export default function HomeProjects() {
                   </span>{" "}
                   
                 </h2>
-                <p className="mb-6 pb-2 text-white dark:text-neutral-300">
+                <p className="mb-6 pb-2 text-black  dark:text-neutral-300">
                 I volunteered to help revamp the website for the local Hispanic Hackers nonprofit. They made the switch from React JS to Next JS for their website. I teamed up with four awesome individuals, and my focus was the landing page. I built the layout from the ground up, adding in some cool conditional rendering inspired by a Figma design. Check out the final product by clicking the link below!
                 </p>
                 <button
                   type="button"
-                  className="inline-block rounded-full bg-white px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  className="inline-block rounded-full shadow-lg p-4 bg-gray-200 px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => {
@@ -46,19 +46,19 @@ export default function HomeProjects() {
       </section>
       {/* Section: Design Block */}
       <section className="mb-16 text-center md:text-left">
-        <div className="block rounded-lg bg-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div className="block shadow-lg p-4 bg-gray-200 text-black  dark:bg-neutral-700">
           <div className="flex flex-wrap items-center">
             <div className="w-full shrink-0 grow-0 basis-auto md:w-8/12">
               <div className="px-6 py-12 md:px-12">
                 <h2 className="mb-6 text-3xl text-white font-bold">
-                  <span className="text-white ">React.js TIC-TAC-TOE</span> 
+                  <span className="text-black ">React.js TIC-TAC-TOE</span> 
                 </h2>
-                <p className="mb-6 pb-2 text-white dark:text-neutral-300">
+                <p className="mb-6 pb-2 text-black dark:text-neutral-300">
                 I learned to develop a tic-tac-toe game using React, creating modular components like Grid and MarkButton. This project enhanced my proficiency in state management with useState and useEffect hooks, enabling dynamic rendering and player interactions. It also honed my skills in game logic and UI design with Tailwind CSS.
                 </p>
                 <button
                   type="button"
-                  className="inline-block rounded-full bg-white px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  className="inline-block rounded-full shadow-lg p-4 bg-gray-100 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => {
@@ -73,7 +73,7 @@ export default function HomeProjects() {
               <Image
                 src={TicTacToe}
                 alt="Tic-Tac-Toe"
-                className="w-full rounded-t-lg md:rounded-tr-none md:rounded-bl-lg"
+                className="w-full shadow-lg"
               />
             </div>
           </div>
@@ -81,26 +81,26 @@ export default function HomeProjects() {
       </section>
       {/* Section: Design Block */}
       <section className="mb-16 text-center md:text-left">
-        <div className="block rounded-lg bg-black shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div className="block  shadow-lg p-4 bg-gray-200 text-black  dark:bg-neutral-700">
           <div className="flex flex-wrap items-center">
             <div className="block w-full shrink-0 grow-0 basis-auto md:w-4/12 lg:flex">
               <Image
                 src={investCalc}
                 alt="coming soon"
-                className="w-full rounded-t-lg md:rounded-tr-none md:rounded-bl-lg"
+                className="w-full shadow-lg"
               />
             </div>
             <div className="w-full shrink-0 grow-0 basis-auto md:w-8/12">
               <div className="px-6 py-12 md:px-12">
                 <h2 className="mb-6 text-3xl text-white font-bold">
-                  <span className="text-white ">Investment Calculator</span> 
+                  <span className="text-black ">Investment Calculator</span> 
                 </h2>
-                <p className="mb-6 pb-2 text-white dark:text-neutral-300">
+                <p className="mb-6 pb-2 text-black dark:text-neutral-300">
                 I developed a React.js application designed to forecast investment returns by computing key metrics such as initial investment, annual investment, expected return, and investment duration. The application utilizes a userInput state to store user-provided information, which is then leveraged for calculations. Additionally, I seamlessly passed user data between components using props. Furthermore, I implemented JavaScript functions capable of accurately computing and monitoring investment returns based on the user's input.
                 </p>
                 <button
                   type="button"
-                  className="inline-block rounded-full bg-white px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                  className="inline-block rounded-full shadow-lg p-4 bg-gray-100 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-black  transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => {

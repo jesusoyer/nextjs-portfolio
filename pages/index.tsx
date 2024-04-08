@@ -1,5 +1,5 @@
 import Homepage from "../components/Homepage";
-import Navbar from "../components/Navbar";
+import HomePageNavbar from "../components/HomePageNavbar";
 import Footer from "@/components/Footer";
 
 
@@ -7,7 +7,7 @@ export default function home() {
   return (
    <main>
         
-    <Navbar />
+    <HomePageNavbar />
     <Homepage />
     
     <Footer />
