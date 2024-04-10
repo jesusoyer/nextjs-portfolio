@@ -117,7 +117,7 @@ export default function Homepage() {
             />
 
             <div className="p-6">
-              <h5 className="mb-4 text-lg text-black font-bold">Coming soon</h5>
+              <h5 className="mb-4 text-lg text-black font-bold">React Timer Game</h5>
               <p className="mb-6 text-black">
               I developed a React web game challenging players to stop a timer near zero. By strategically using React useRef and createPortal, I optimized performance, prevented component re-evaluation, and enhanced user experience with efficient DOM access and modal rendering.
               </p>
