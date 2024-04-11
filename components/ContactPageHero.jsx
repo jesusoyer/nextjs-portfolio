@@ -8,18 +8,15 @@ const ContactPageHero = () => {
 
 <div className="relative">
   {/* Background Image */}
-  <Image src={HeroBackgroundImage} alt="sunset Image" className="w-full h-auto" />
+  <Image src={HeroBackgroundImage} alt="sunset Image" className="w-full h-full object-cover" />
 
   {/* Circular Profile Picture */}
-  <div className="absolute top-44 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <div className="rounded-full overflow-hidden w-48 h-48 bg-gray-300">
-    <Image src={ProfileImage} alt="Jesus Image" className="w-full h-full object-cover" />
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div className="rounded-full overflow-hidden w-20 h-20 sm:w-48 sm:h-48 bg-gray-300">
+      <Image src={ProfileImage} alt="Jesus Image" className="w-full h-full object-cover" />
     </div>
   </div>
 </div>
-
-
-
 
    
 
