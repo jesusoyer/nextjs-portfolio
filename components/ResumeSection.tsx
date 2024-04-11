@@ -5,7 +5,7 @@ import professionalResume from '../public/professional resume image.png';
 
 const ResumeSection = () => {
   return (
-    <section className="mx-auto max-w-screen-lg ">
+    <section className="mx-auto max-w-screen-lg mt-14 ">
         <div className="text-3xl text-center font-bold p-10">Experience</div>
   <div className="grid grid-cols-2 gap-4">
   <div className="bg-gray-200 p-4 flex flex-col items-center justify-center">
