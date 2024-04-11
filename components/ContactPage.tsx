@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 
 interface FormData {
   name: string;
@@ -39,16 +39,19 @@ export default function contactPage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://gopnosc9w2.execute-api.us-east-2.amazonaws.com/prod/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-    
+      const response = await fetch(
+        "https://gopnosc9w2.execute-api.us-east-2.amazonaws.com/prod/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
       if (response.ok) {
-        console.log("Form submitted successfully!")
+        console.log("Form submitted successfully!");
         setTimeout(() => {
           window.location.reload();
         }, 1000);
@@ -61,9 +64,9 @@ export default function contactPage() {
     }
   };
   return (
-    <div className="container my-52 mx-auto md:px-6">
+    <div className="container mt-40 mb-10 mx-auto md:px-6">
       {/* <!-- Section: Design Block --> */}
-      <section className="mb-32 ">
+      <section className=" ">
         <div className="container px-6 md:px-12">
           <div className="block bg-gray-300   md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
             <div className="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4">
@@ -167,16 +170,6 @@ export default function contactPage() {
                   </h6>
                 </Link>
               </div>
-            </div>
-            <div className=" text-center ">
-              <Link
-                href="/JesusOyervidesSoftwareEngineerupdate.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black text-center hover:underline"
-              >
-                Download Resume
-              </Link>
             </div>
             <div className="mx-auto max-w-[700px]">
               <h1 className="text-black mb-2">Send Me a message</h1>

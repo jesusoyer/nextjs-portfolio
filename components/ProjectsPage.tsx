@@ -34,7 +34,9 @@ export default function Homepage() {
                 and my focus was the landing page. I built the layout from the
                 ground up, adding in some cool conditional rendering inspired by
                 a Figma design. Check out the final product by clicking the link
-                below!
+                below! 
+                <br></br>
+                <span className="italic text-sm">updated 2023</span>
               </p>
               <Link
                 href="https://www.hispanichackers.com/"
@@ -64,6 +66,8 @@ export default function Homepage() {
                 useState. I implemented game logic for wins and styled the UI
                 with Tailwind CSS. This project offered hands-on experience in
                 React, covering state, components, and UI.
+                <br></br>
+                <span className="italic text-sm">updated 2024</span>
               </p>
               <Link
                 href="https://main.dd8lletq4lb3y.amplifyapp.com/"
@@ -96,6 +100,8 @@ export default function Homepage() {
                 calculations, and data is efficiently passed between components
                 using props. JavaScript functions ensure precise computation and
                 monitoring of returns.
+                <br></br>
+                <span className="italic text-sm">updated 2024</span>
               </p>
               <Link
                 href="https://main.d1r08ii8kqipne.amplifyapp.com/"
@@ -120,6 +126,8 @@ export default function Homepage() {
               <h5 className="mb-4 text-lg text-black font-bold">React Timer Game</h5>
               <p className="mb-6 text-black">
               I developed a React web game challenging players to stop a timer near zero. By strategically using React useRef and createPortal, I optimized performance, prevented component re-evaluation, and enhanced user experience with efficient DOM access and modal rendering.
+              <br></br>
+                <span className="italic text-sm">updated 2024</span>
               </p>
               <Link
                 href="https://main.d24hig7yswwjx.amplifyapp.com/"
