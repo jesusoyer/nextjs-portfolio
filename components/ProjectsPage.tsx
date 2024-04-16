@@ -4,6 +4,7 @@ import hispanicHackers from "../public/HispanicHackers.png";
 import TicTacToe from "../public/Tic tac toe image.png";
 import investmentCalc from "../public/InvestmentCalc.png";
 import timerGame from "../public/timerGame.png";
+import storeRefactor from "../public/storerefactorimage.png";
 
 import ContructionImage from "../public/constructionImage.jpg";
 export default function Homepage() {
@@ -142,23 +143,23 @@ export default function Homepage() {
 
           <div className="bg-gray-300 shadow-lg p-3">
             <Image
-              src={ContructionImage}
-              alt="construction image"
+              src={storeRefactor}
+              alt="refactor project"
               className="h-64 shadow-lg "
             />
 
             <div className="p-6">
-              <h5 className="mb-4 text-lg text-black font-bold">Coming soon</h5>
+              <h5 className="mb-4 text-lg text-black font-bold">Store Front useContext and useReducer refactor</h5>
               <p className="mb-6 text-black">
-              Chase your dreams relentlessly. Your potential is boundless, waiting to be unleashed. Embrace the journey, for every obstacle is a chance to grow stronger. You have the power to shape your destiny.
+              In this project, I successfully refactored a premade store website, transitioning from scattered state management to a centralized approach. Leveraging React's useContext and useReducer hooks, I consolidated state logic into a single store file for enhanced efficiency and maintainability.
               </p>
               <a
-                href=""
+                href="https://main.d1j3w8nsh8rkao.amplifyapp.com/"
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 className="inline-block rounded bg-white px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
               >
-                Button Disabled
+                To Refactor Project
               </a>
             </div>
           </div>
