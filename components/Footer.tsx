@@ -1,12 +1,12 @@
 export default function footer() {
   return (
-    <section className="bg-white">
-      <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav className="flex flex-wrap justify-center -mx-5 -my-2">
+    <section className="bg-palette1 border-t-4 border-palette6">
+      <div className=" px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <nav className="flex flex-wrap justify-center">
           <div className="px-5 py-2">
             <a
               href="/"
-              className="text-base leading-6 text-gray-500 hover:text-gray-900"
+              className="text-base leading-6 text-palette5 hover:text-gray-900"
             >
               About
             </a>
@@ -15,7 +15,7 @@ export default function footer() {
           <div className="px-5 py-2">
             <a
               href="/projects"
-              className="text-base leading-6 text-gray-500 hover:text-gray-900"
+              className="text-base leading-6 text-palette5 hover:text-gray-900"
             >
               Projects
             </a>
@@ -23,17 +23,17 @@ export default function footer() {
           <div className="px-5 py-2">
             <a
               href="/contact"
-              className="text-base leading-6 text-gray-500 hover:text-gray-900"
+              className="text-base leading-6 text-palette5 hover:text-gray-900"
             >
               Contact
             </a>
           </div>
         </nav>
-        <div className="flex justify-center mt-8 space-x-6">
+        <div className="flex justify-center  space-x-6">
           <a
             href="https://www.linkedin.com/in/jesus-oyervides-jr/"
             target="_blank"
-            className="text-gray-400 hover:text-gray-500"
+            className="text-palette2 hover:text-gray-500"
           >
             <span className="sr-only">LinkedIn</span>
             <svg
@@ -48,7 +48,7 @@ export default function footer() {
           <a
             href="https://github.com/jesusoyer"
             target="_blank"
-            className="text-gray-400 hover:text-gray-500"
+            className="text-palette2 hover:text-gray-500"
           >
             <span className="sr-only">GitHub</span>
             <svg
@@ -64,7 +64,7 @@ export default function footer() {
           <a
             href="https://www.facebook.com/profile.php?id=100093627480196"
             target="_blank"
-            className="text-gray-400 hover:text-gray-500"
+            className="text-palette2 hover:text-gray-500"
           >
             <span className="sr-only">FaceBook</span>
             <svg
@@ -79,7 +79,7 @@ export default function footer() {
           <a
             href="mailto:oyervidesjesus017@gmail.com"
             target="_blank"
-            className="text-gray-400 hover:text-gray-500"
+            className="text-palette2 hover:text-gray-500"
           >
             <span className="sr-only">Gmail</span>
             <svg
@@ -96,7 +96,7 @@ export default function footer() {
             </svg>
           </a>
         </div>
-        <p className="mt-8 text-base leading-6 text-center text-gray-400">
+        <p className=" text-base leading-6 text-center text-palette5">
           Jesus Oyervides jr Portfolio 2023
         </p>
       </div>

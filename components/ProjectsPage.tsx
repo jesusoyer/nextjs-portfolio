@@ -9,11 +9,11 @@ import reduxPracImage from "../public/reduxPracImage.png";
 
 export default function Projects() {
   return (
-    <section className="bg-palette3 ">
+    <section className="bg-palette3 p-3">
       <h2 className="text-palette5 text-2xl p-5 ml-6">Other Projects...</h2>
     <div className="container   mx-auto ">
       {/* <!-- Section: Design Block --> */}
-      <section className="mb-32 text-palette2 text-center lg:text-left">
+      <section className=" text-palette2 text-center lg:text-left">
         
 
         <div className="grid gap-x-6 gap-y-5 lg:grid-cols-3 lg:gap-x-12 shadow-outline p-4 ">
