@@ -1,5 +1,5 @@
 import React from 'react';
-import hhPic from '../public/HispanicHackers.png';
+import hhPic from './HispanicHackers.png';
 import Image from "next/image";
 import Link from "next/link";
 

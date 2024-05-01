@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import developerResume from '../public/developerResumeImage.png';
-import professionalResume from '../public/professional resume image.png';
+import developerResume from './developerResumeImage.png';
+import professionalResume from './professional resume image.png';
 
 const ResumeSection = () => {
   return (

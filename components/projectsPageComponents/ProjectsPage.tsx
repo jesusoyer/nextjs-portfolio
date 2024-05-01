@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import hispanicHackers from "../public/HispanicHackers.png";
-import TicTacToe from "../public/Tic tac toe image.png";
-import investmentCalc from "../public/InvestmentCalc.png";
-import timerGame from "../public/timerGame.png";
-import storeRefactor from "../public/storerefactorimage.png";
-import reduxPracImage from "../public/reduxPracImage.png";
+import hispanicHackers from "./HispanicHackers.png";
+import TicTacToe from "./Tic tac toe image.png";
+import investmentCalc from "./InvestmentCalc.png";
+import timerGame from "./timerGame.png";
+import storeRefactor from "./storerefactorimage.png";
+import reduxPracImage from "./reduxPracImage.png";
 
 export default function Projects() {
   return (
