@@ -199,7 +199,7 @@ const ContactSection = () => {
               
 
                 <span className="mx-2 text-palette2 truncate w-72 dark:text-gray-400">
-                    <Link href="https://docs.google.com/document/d/16KS41bwDhJm7bEe7ch4Cvdoxu0OoOjYR-1LaPPzmO7w/edit?usp=sharing"
+                    <Link href="https://docs.google.com/document/d/1ZS_IKHy4hCqbDgvm92PGjnfu6s2zv-y4Zl4DM9A9784/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-palette1 underline underline-solid">
@@ -213,7 +213,7 @@ const ContactSection = () => {
               <p className="flex items-start ml-10">
 
               <span className="mx-2 text-palette2 truncate w-72 dark:text-gray-400">
-                    <Link href="https://docs.google.com/document/d/1-Z4cFljiCr8Ba5CvnpqjIZKTbNs65D55Jb0tk9jsAyk/edit?usp=sharing"
+                    <Link href="https://docs.google.com/document/d/1pznuI-HdsKCs_94g2apFyzqPDqZjtiJbUFGgkA-OfdE/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-palette1 underline underline-solid">
