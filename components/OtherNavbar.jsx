@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PLogo from "../public/Personallogo3.png";
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function OtherNavbar() {
@@ -14,7 +16,13 @@ export default function OtherNavbar() {
     <nav className="bg-palette1  absolute top-0 left-0 w-full z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">Jesus Oyervides</span>
+        <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
+  <Image 
+    src={PLogo} 
+    alt="Personal Logo" 
+    className="w-12 h-12 object-contain" 
+  />
+</span>
         </Link>
         <button
           data-collapse-toggle="navbar-default"

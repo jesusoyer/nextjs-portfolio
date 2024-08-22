@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="bg-black opacity-20 w-full h-full absolute inset-0"></div>
       </div>
       <div className="absolute inset-0 flex flex-col justify-start items-center pt-20 text-palette5 text-center">
-        <h1 className="text-5xl font-extrabold bg-palette3 rounded-lg bg-opacity-40 ">My Portfolio</h1>
+     
       
       </div>
     </section>
