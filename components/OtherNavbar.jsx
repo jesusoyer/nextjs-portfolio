@@ -4,25 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function OtherNavbar() {
-  // Add state to manage the visibility of the dropdown menu
+  // State to manage the dropdown menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle the menu visibility
+  // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-palette1  absolute top-0 left-0 w-full z-10">
+    <nav className="bg-palette1 absolute top-0 left-0 w-full z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-        <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
-  <Image 
-    src={PLogo} 
-    alt="Personal Logo" 
-    className="w-12 h-12 object-contain" 
-  />
-</span>
+          <Image 
+            src={PLogo} 
+            alt="Personal Logo" 
+            width={48} 
+            height={48} 
+            className="object-contain"
+          />
+          <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
+            Your Brand
+          </span>
         </Link>
         <button
           data-collapse-toggle="navbar-default"
@@ -38,14 +41,10 @@ export default function OtherNavbar() {
           </svg>
         </button>
         <div className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`} id="navbar-default">
-          <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border  border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-
-          <Link href="/" className="text-palette5 block py-2 px-3 rounded-t-lg   hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white  ">Home
-            </Link>
-            <Link href="/projects" className="text-palette5 block py-2 px-3  hover:bg-white md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:dark:hover:bg-transparent">Projects
-            </Link>
-            <Link href="/contact" className="text-palette5 block py-2 px-3  rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0  dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Contact
-            </Link>
+          <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <Link href="/" className="text-palette5 block py-2 px-3 rounded-t-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white">Home</Link>
+            <Link href="/projects" className="text-palette5 block py-2 px-3 hover:bg-white md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 md:dark:hover:bg-transparent">Projects</Link>
+            <Link href="/contact" className="text-palette5 block py-2 px-3 rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Contact</Link>
           </div>
         </div>
       </div>
