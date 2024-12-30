@@ -19,7 +19,9 @@ export default function Homepage() {
         <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
   <Image 
     src= "/personallogo3.png" 
-    alt="Personal Logo" 
+    alt="Personal Logo"
+    width={100} 
+    height={100}  
     className="w-12 h-12 object-contain" 
   />
 </span>
