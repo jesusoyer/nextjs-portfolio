@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PLogo from "../public/Personallogo3.png";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +16,7 @@ export default function OtherNavbar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image 
-            src={PLogo} 
+            src="/personallogo3.png" 
             alt="Personal Logo" 
             width={48} 
             height={48} 
