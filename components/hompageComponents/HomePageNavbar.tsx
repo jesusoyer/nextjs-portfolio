@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PLogo from "./personalLogo3.png";
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,7 +18,7 @@ export default function Homepage() {
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
   <Image 
-    src={PLogo} 
+    src= "/personallogo3.png" 
     alt="Personal Logo" 
     className="w-12 h-12 object-contain" 
   />
