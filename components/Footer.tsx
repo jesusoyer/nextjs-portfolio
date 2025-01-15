@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function footer() {
   return (
-    <section className="bg-palette1 border-t-4 border-palette6">
+    <section className="bg-black border-t-4 border-palette6">
       <div className=" px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center">
           <div className="px-5 py-2">
@@ -42,7 +42,7 @@ export default function footer() {
             <span className="sr-only">LinkedIn</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -57,7 +57,7 @@ export default function footer() {
             <span className="sr-only">GitHub</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -73,7 +73,7 @@ export default function footer() {
             <span className="sr-only">FaceBook</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -88,7 +88,7 @@ export default function footer() {
             <span className="sr-only">Gmail</span>
             <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-palette2 hover:text-gray-500 "
+                  className="w-6 h-6 mx-2 text-white hover:text-gray-500 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

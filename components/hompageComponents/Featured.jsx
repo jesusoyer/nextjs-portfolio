@@ -4,7 +4,7 @@ import Link from 'next/link';
 import FeaturedImage from "./Trucvietrevamp.png"
 const intro = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 shadow-2xl">
     {/* Text Box */}
     <div className="text-left">
       <h2 className="text-3xl font-bold text-gray-800 mb-4">TRUC VIET WEBSITE REVAMP</h2>
@@ -14,7 +14,7 @@ const intro = () => {
  
       <Link href="https://www.trucviet.org">
     
-      <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <button className="mt-4 px-6 py-2 bg-palette1 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
         Check out the project!
       </button>
     

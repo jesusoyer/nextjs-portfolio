@@ -6,7 +6,7 @@ export default function homepage() {
      <section className="relative ">
       <Hero />
       <Featured />
-      <div className="bg-palette3">
+      <div className="bg-palette6">
       <HomeProjects />
       </div>
     </section>
