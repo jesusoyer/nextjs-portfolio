@@ -14,12 +14,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        palette1: '#ff6e00',
-        palette2: '#803e2f',
-        palette3: '#38322d',
-        palette4: '#3e3d38',
-        palette5: '#a79986',
-        palette6: '#1f1d20',
+        palette1: '#ff6600', //intro 
+        palette2: '#000000',
+        palette3: '#ff6e00',
+        palette4: '#000000', //navbar
+        palette5: '#ffffff', //font
+        palette6: '#ff6600',
       }
 
     },

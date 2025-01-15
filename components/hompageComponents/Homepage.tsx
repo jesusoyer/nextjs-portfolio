@@ -1,11 +1,11 @@
 import Hero from "./Hero"
 import HomeProjects from "./HomepageProjects";
-import Intro from "./intro"
+import Featured from "./Featured"
 export default function homepage() {
     return (
      <section className="relative ">
       <Hero />
-      <Intro />
+      <Featured />
       <div className="bg-palette3">
       <HomeProjects />
       </div>

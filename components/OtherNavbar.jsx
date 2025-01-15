@@ -22,9 +22,7 @@ export default function OtherNavbar() {
             height={48} 
             className="object-contain"
           />
-          <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white">
-            Your Brand
-          </span>
+         
         </Link>
         <button
           data-collapse-toggle="navbar-default"
