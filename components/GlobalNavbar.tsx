@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router"; // Import useRouter
 
 export default function Homepage() {
   // Add state to manage the visibility of the dropdown menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Use useRouter to get the current route
+  const router = useRouter();
+  const currentRoute = router.pathname;
 
   // Toggle the menu visibility
   const toggleMenu = () => {
@@ -46,27 +51,39 @@ export default function Homepage() {
           id="navbar-default"
         >
           <div className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-palette2 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-transparent dark:bg-palette2 md:dark:bg-gray-900 dark:border-gray-700 justify-center">
-            <Link
-              href="/"
-              className="text-palette5 md:text-palette5 font-extrabold bg-transparent block py-2 px-3 rounded-t-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:bg-transparent"
-            >
-              Home
-            </Link>
-            <Link
-              href="/projects"
-              className="text-palette5 md:text-palette5 font-extrabold bg-transparent block py-2 px-3 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 md:dark:hover:bg-transparent"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent font-extrabold text-palette5 md:text-palette5 block py-2 px-3 rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-            >
-              Contact
-            </Link>
+            {/* Conditionally render or style Home link */}
+            {currentRoute !== "/" && (
+              <Link
+                href="/"
+                className="text-palette5 md:text-palette5 font-extrabold bg-transparent block py-2 px-3 rounded-t-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:bg-transparent"
+              >
+                Home
+              </Link>
+            )}
+
+            {/* Conditionally render or style Projects link */}
+            {currentRoute !== "/projects" && (
+              <Link
+                href="/projects"
+                className="text-palette5 md:text-palette5 font-extrabold bg-transparent block py-2 px-3 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 md:dark:hover:bg-transparent"
+              >
+                Projects
+              </Link>
+            )}
+
+            {/* Conditionally render or style Contact link */}
+            {currentRoute !== "/contact" && (
+              <Link
+                href="/contact"
+                className="bg-transparent font-extrabold text-palette5 md:text-palette5 block py-2 px-3 rounded-b-lg hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Contact
+              </Link>
+            )}
           </div>
         </div>
       </div>
     </nav>
   );
 }
+
