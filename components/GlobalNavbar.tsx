@@ -15,8 +15,14 @@ export default function Homepage() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Determine the navbar background color based on the current route
+  const navbarBackground =
+    currentRoute === "/projects" || currentRoute === "/contact"
+      ? "bg-black"
+      : "bg-palette4 md:bg-opacity-70";
+
   return (
-    <nav className="bg-palette4 md:bg-opacity-70 absolute top-0 left-0 w-full z-10">
+    <nav className={`${navbarBackground} absolute top-0 left-0 w-full z-10`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="text-palette5 self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:text-white"></span>
@@ -86,4 +92,3 @@ export default function Homepage() {
     </nav>
   );
 }
-

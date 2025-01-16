@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from './personalLogo3.png';
 import hispanicHackers from "./HispanicHackers.png";
 import TicTacToe from "./Tic tac toe image.png";
 import investmentCalc from "./InvestmentCalc.png";
@@ -7,208 +8,106 @@ import timerGame from "./timerGame.png";
 import storeRefactor from "./storerefactorimage.png";
 import reduxPracImage from "./reduxPracImage.png";
 
-export default function Projects() {
+export default function HomeProjects() {
+  const projects = [
+    {
+      id: 1,
+      imageSrc: hispanicHackers,
+      title: "Hispanic Hackers Website",
+      description: "I volunteered to help revamp the website for the local Hispanic Hackers nonprofit using Next.js. I focused on building the landing page from the ground up.",
+      link: "https://www.hispanichackers.com/",
+      colSpan: 2,  // This project will take up 2 columns
+      rowSpan: 2,  // This project will take up 2 rows
+    },
+    {
+      id: 2,
+      imageSrc: TicTacToe,
+      title: "React.js Tic-Tac-Toe",
+      description: "A tic-tac-toe game built with React.js to practice state management and game logic. It helped me learn about dynamic rendering and player interaction.",
+      link: "https://main.dd8lletq4lb3y.amplifyapp.com/",
+      colSpan: 1,  // This project will take up 1 column
+      rowSpan: 1,  // This project will take up 1 row
+    },
+    {
+      id: 3,
+      imageSrc: investmentCalc,
+      title: "Investment Calculator",
+      description: "A React.js app to forecast investment returns. The app calculates and monitors returns based on user input such as initial investment, expected return, and duration.",
+      link: "https://main.d1r08ii8kqipne.amplifyapp.com/",
+      colSpan: 1,  // This project will take up 1 column
+      rowSpan: 2,  // This project will take up 2 rows
+    },
+    {
+      id: 4,
+      imageSrc: timerGame,
+      title: "Timer Game",
+      description: " A challenging timer game built with React, leveraging hooks like `useRef` for performance optimization.",
+      link: "https://main.d24hig7yswwjx.amplifyapp.com/",
+      colSpan: 1,  // This project will take up 1 column
+      rowSpan: 1,  // This project will take up 1 row
+    },
+    {
+      id: 5,
+      imageSrc: storeRefactor,
+      title: "Refactor Project",
+      description: "Refactored a store's state management using React's `useContext` and `useReducer` hooks for better maintainability..",
+      link: "https://main.d1j3w8nsh8rkao.amplifyapp.com/",
+      colSpan: 1,  // This project will take up 1 column
+      rowSpan: 1,  // This project will take up 1 row
+    },
+    {
+      id: 6,
+      imageSrc: reduxPracImage,
+      title: "Redux Practice",
+      description: "A React project to practice Redux Toolkit, managing state with slices for a counter and authentication flow.",
+      link: "https://example.com/games-library",
+      colSpan: 2,  // This project will take up 2 columns
+      rowSpan: 1,  // This project will take up 1 row
+    }
+  ];
+
   return (
-    <section className="bg-palette3 p-3">
-      <h2 className="text-palette5 text-2xl p-5 ml-6">Other Projects...</h2>
-    <div className="container   mx-auto ">
-      {/* <!-- Section: Design Block --> */}
-      <section className=" text-palette2 text-center lg:text-left">
-        
+    <div className="container mx-auto md:px-6 mt-6">
+      
 
-        <div className="grid gap-x-6 gap-y-5 lg:grid-cols-3 lg:gap-x-12 shadow-outline p-4 ">
-          <div className=" bg-palette2  shadow-lg p-3 rounded-md">
-            <Image
-              src={hispanicHackers}
-              alt="Hispanic Hackers Image"
-              className="shadow-lg h-fit mx-auto grid-cols-1"
-            />
 
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                Hispanic Hackers
-              </h5>
-              <p className="mb-6 text-palette6">
-                I volunteered to help revamp the website for the local Hispanic
-                Hackers nonprofit. They made the switch from React JS to Next JS
-                for their website. I teamed up with four awesome individuals,
-                and my focus was the landing page. I built the layout from the
-                ground up, adding in some cool conditional rendering inspired by
-                a Figma design. Check out the final product by clicking the link
-                below!
-                <br></br>
-                <span className="italic text-sm">updated 2023</span>
-              </p>
-              <Link
-                href="https://www.hispanichackers.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To Hispanic Hacker website
-              </Link>
+
+      <section className="p-6 text-center md:text-left">
+       
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 shadow-2xl rounded-md bg-palette6 ">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`relative group overflow-hidden rounded-lg shadow-lg bg-white col-span-${project.colSpan} row-span-${project.rowSpan} transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-xl`}
+            >
+              {/* Project Image with increased brightness */}
+              <Image
+                src={project.imageSrc}
+                alt={project.title}
+                width={400}
+                height={300}
+                className="object-cover w-full h-full brightness-125"
+              />
+
+              {/* Overlay with Text and Button */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-60 transition-all">
+                <div className="absolute bottom-0 p-4 text-white">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-sm mb-4">{project.description}</p>
+                  <button
+                    type="button"
+                    className="inline-block px-4 py-2 bg-white text-palette6 rounded-full hover:bg-danger-600 transition-all"
+                    onClick={() => window.open(project.link, '_blank')}
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div className=" bg-palette2 shadow-lg p-3 rounded-md">
-            <Image
-              src={TicTacToe}
-              alt="Tic-Tac-Toe image"
-              className=" shadow-lg h-fit"
-            />
-
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                React Tic-Tac-Toe
-              </h5>
-              <p className="mb-6 text-palette6">
-                I created a React tic-tac-toe game with modular components for
-                the board and cells. State was managed using hooks like
-                useState. I implemented game logic for wins and styled the UI
-                with Tailwind CSS. This project offered hands-on experience in
-                React, covering state, components, and UI.
-                <br></br>
-                <span className="italic text-sm">updated 2024</span>
-              </p>
-              <Link
-                href="https://main.dd8lletq4lb3y.amplifyapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To React Tik-Tac-Toe
-              </Link>
-            </div>
-          </div>
-
-          <div className=" bg-palette2 shadow-lg p-3 rounded-md">
-            <Image
-              src={investmentCalc}
-              alt="Investment Calculator image"
-              className="h-fit shadow-lg"
-            />
-
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                Investment Calculator
-              </h5>
-              <p className="mb-6 text-palette6">
-                I created a React app for investment return forecasting,
-                considering parameters like initial and annual investments,
-                return rates, and duration. User input is stored in state for
-                calculations, and data is efficiently passed between components
-                using props. JavaScript functions ensure precise computation and
-                monitoring of returns.
-                <br></br>
-                <span className="italic text-sm">updated 2024</span>
-              </p>
-              <Link
-                href="https://main.d1r08ii8kqipne.amplifyapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To Investment Calculator
-              </Link>
-            </div>
-          </div>
-          <div className=" bg-palette2 shadow-lg p-3 rounded-md">
-            <Image
-              src={timerGame}
-              alt="Timer Game image"
-              className="h-fit shadow-lg "
-            />
-
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                React Timer Game
-              </h5>
-              <p className="mb-6 text-palette6">
-                I developed a React web game challenging players to stop a timer
-                near zero. By strategically using React useRef and createPortal,
-                I optimized performance, prevented component re-evaluation, and
-                enhanced user experience with efficient DOM access and modal
-                rendering.
-                <br></br>
-                <span className="italic text-sm">updated 2024</span>
-              </p>
-              <Link
-                href="https://main.d24hig7yswwjx.amplifyapp.com/"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To React Timer Game
-              </Link>
-            </div>
-          </div>
-
-          <div className=" bg-palette2 shadow-lg p-3 rounded-md">
-            <Image
-              src={storeRefactor}
-              alt="refactor project"
-              className="h-fit shadow-lg "
-            />
-
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                Store Front useContext and useReducer refactor
-              </h5>
-              <p className="mb-6 text-palette6">
-                In this project, I successfully refactored a premade store
-                website, transitioning from scattered state management to a
-                centralized approach. Leveraging React's useContext and
-                useReducer hooks, I consolidated state logic into a single store
-                file for enhanced efficiency and maintainability.<br></br>
-                updated 2024
-              </p>
-              <a
-                href="https://main.d1j3w8nsh8rkao.amplifyapp.com/"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To Refactor Project
-              </a>
-            </div>
-          </div>
-
-          <div className=" bg-palette2 shadow-lg p-3 rounded-md">
-            <Image
-              src={reduxPracImage}
-              alt="Redux Project Image"
-              className="h-fit shadow-lg "
-            />
-
-            <div className="p-6">
-              <h5 className="mb-4 text-lg text-palette6 font-bold">
-                Redux Counter Project
-              </h5>
-              <p className="mb-6 text-palette6">
-                I developed a ReactJS project to practice Redux Toolkit,
-                managing a counter and mock authentication. Created slices
-                handle both states—incrementing, decrementing numbers, and
-                toggling authentication status.<br></br>
-                updated 2024
-              </p>
-              <a
-                href="https://main.d3en9wruzpsg5p.amplifyapp.com/"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="inline-block rounded bg-palette5 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-palette6 text-center shadow-md transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-xl focus:bg-primary-600 focus:shadow-xl focus:outline-none active:bg-primary-700 active:shadow-xl dark:shadow-lg dark:hover:shadow-md dark:focus:shadow-md dark:active:shadow-md"
-              >
-                To Redux Counter
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
-      {/* <!-- Section: Design Block --> */}
     </div>
-    </section>
   );
 }
