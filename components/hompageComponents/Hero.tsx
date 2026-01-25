@@ -1,43 +1,97 @@
 import Image from "next/image";
-import meImage from "./bridgePic.jpeg"
 import Link from 'next/link';
 
 export default function Hero() {
     return (
-      <section className="relative h-[80vh] border border-b-8 border-palette2">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={meImage}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center bottom"
-          className="absolute inset-0 w-full h-full"
-        />
-        <div className="bg-black opacity-20 w-full h-full absolute inset-0"></div>
-      </div>
-      
-      {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-start items-center pt-20 text-palette5 text-center">
-        {/* Centered Image */}
-        <div className="relative z-10">
-          <Image
-            src="/personalLogo3.png"
-            alt="Centered Image"
-            width={100} // Adjust width as needed
-            height={200} // Adjust height as needed
-            className="rounded-full shadow-lg"
-          />
+      <section className="relative min-h-screen flex items-center bg-black">
+        
+        {/* Background Image - Left Side */}
+       <div className="absolute inset-0 md:w-1/2">
+  <Image
+    src="/images/profileImages/aztecMexicanImage.jpg"
+    alt="Jesus Oyervides Jr"
+    fill
+    style={{ objectFit: 'cover', objectPosition: 'left 10%' }}
+    className="opacity-90"
+    priority
+  />
+          {/* Gradient fade to the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/50 to-black"></div>
         </div>
-        <div className="max-w-3xl mx-auto px-8 text-center text-palette5">
-    <p className="text-lg leading-relaxed">
-      Hi, I’m Jesus Oyervides Jr., a frontend web developer and graduate of the University of Austin's Full Stack Bootcamp. I love building user-friendly interfaces, tackling challenges, and continuously growing. Outside of coding, I enjoy hiking, board games, and running a book club. I also volunteer for nonprofits, redesigning their websites. This portfolio, built with Next.js, showcases my skills—feel free to explore and reach out!
-    </p>
-  </div>
 
-      </div>
-    </section>
+        {/* Content - Right Side Overlaying */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-20">
+          <div className="flex justify-end">
+            <div className="w-full md:w-1/2 md:pl-12">
+              
+              {/* Name & Title */}
+              <div className="mb-8">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-white mb-4 tracking-tight">
+                  Jesus<br />
+                  <span className="font-serif italic">Oyervides Jr.</span>
+                </h1>
+                
+                <div className="h-px w-24 bg-white mb-6"></div>
+                
+                <p className="text-2xl md:text-3xl text-neutral-300 font-light">
+                  Frontend Developer & Digital Craftsman
+                </p>
+              </div>
 
+              {/* Artist Statement */}
+              <div className="mb-12 bg-black/60 backdrop-blur-sm border border-neutral-700 p-8">
+                <div className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-4">
+                  Artist Statement
+                </div>
+                <p className="text-lg text-neutral-300 leading-relaxed font-light">
+                  A creator who transforms complex problems into elegant solutions. 
+                  With <span className="text-white font-medium">10+ years</span> of experience 
+                  in the public sector and training from UT Austin, I craft web applications 
+                  that bridge technology and human need.
+                </p>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 mb-12">
+                <div className="bg-black/60 backdrop-blur-sm border border-neutral-700 p-4 text-center">
+                  <div className="text-3xl font-light text-white mb-1">10+</div>
+                  <div className="text-xs uppercase tracking-widest text-neutral-400">Years</div>
+                </div>
+                <div className="bg-black/60 backdrop-blur-sm border border-neutral-700 p-4 text-center">
+                  <div className="text-3xl font-light text-white mb-1">8+</div>
+                  <div className="text-xs uppercase tracking-widest text-neutral-400">Works</div>
+                </div>
+                <div className="bg-black/60 backdrop-blur-sm border border-neutral-700 p-4 text-center">
+                  <div className="text-3xl font-light text-white mb-1">∞</div>
+                  <div className="text-xs uppercase tracking-widest text-neutral-400">Ideas</div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                  href="/projects"
+                  className="px-8 py-4 bg-white text-black font-light uppercase tracking-wider text-sm hover:bg-neutral-200 transition-all text-center"
+                >
+                  Enter Gallery
+                </Link>
+                <Link 
+                  href="/contact"
+                  className="px-8 py-4 border border-white text-white font-light uppercase tracking-wider text-sm hover:bg-white hover:text-black transition-all text-center"
+                >
+                  Contact
+                </Link>
+              </div>
+
+              {/* Availability */}
+              <div className="mt-8 text-neutral-400 text-sm">
+                <p className="tracking-widest uppercase">Available for New Opportunities</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
     )
-  }
+}

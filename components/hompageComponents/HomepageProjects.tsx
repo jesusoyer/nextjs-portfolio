@@ -1,77 +1,124 @@
-import hispanicHackers from "./HispanicHackers.png";
-import TicTacToe from "./Tic tac toe image.png";
-import investCalc from "./InvestmentCalc.png";
+import React from 'react'
 import Image from "next/image";
+import Link from 'next/link';
 
-export default function HomeProjects() {
-  const projects = [
-    {
-      id: 1,
-      imageSrc: hispanicHackers,
-      title: "Hispanic Hackers Website",
-      description: "I volunteered to help revamp the website for the local Hispanic Hackers nonprofit using Next.js. I focused on building the landing page from the ground up.",
-      link: "https://www.hispanichackers.com/",
-      colSpan: 2,  // This project will take up 2 columns
-      rowSpan: 2,  // This project will take up 2 rows
-    },
-    {
-      id: 2,
-      imageSrc: TicTacToe,
-      title: "React.js Tic-Tac-Toe",
-      description: "A tic-tac-toe game built with React.js to practice state management and game logic. It helped me learn about dynamic rendering and player interaction.",
-      link: "https://main.dd8lletq4lb3y.amplifyapp.com/",
-      colSpan: 1,  // This project will take up 1 column
-      rowSpan: 1,  // This project will take up 1 row
-    },
-    {
-      id: 3,
-      imageSrc: investCalc,
-      title: "Investment Calculator",
-      description: "A React.js app to forecast investment returns. The app calculates and monitors returns based on user input such as initial investment, expected return, and duration.",
-      link: "https://main.d1r08ii8kqipne.amplifyapp.com/",
-      colSpan: 1,  // This project will take up 1 column
-      rowSpan: 2,  // This project will take up 2 rows
-    }
-  ];
-
+const HomepageProjects = () => {
   return (
-    <div className="container mx-auto md:px-6">
-      <section className="p-6 text-center md:text-left">
-       
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 shadow-2xl rounded-sm bg-white">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className={`relative group overflow-hidden rounded-lg shadow-lg bg-white col-span-${project.colSpan} row-span-${project.rowSpan} transition-transform duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-xl`}
+    <section className="bg-black py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* MORE PROJECTS - Grid */}
+        <div className="border-t border-neutral-800 pt-16">
+          <div className="flex justify-between items-center mb-12">
+            <h3 className="text-2xl font-light text-white">More Work</h3>
+            <Link 
+              href="/projects"
+              className="text-sm uppercase tracking-wider text-neutral-400 hover:text-white transition-colors"
             >
-              {/* Project Image with increased brightness */}
-              <Image
-                src={project.imageSrc}
-                alt={project.title}
-                width={400}
-                height={300}
-                className="object-cover w-full h-full brightness-125"
-              />
+              View All →
+            </Link>
+          </div>
 
-              {/* Overlay with Text and Button */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-60 transition-all">
-                <div className="absolute bottom-0 p-4 text-white">
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p className="text-sm mb-4">{project.description}</p>
-                  <button
-                    type="button"
-                    className="inline-block px-4 py-2 bg-palette6 text-white rounded-full hover:bg-danger-600 transition-all"
-                    onClick={() => window.open(project.link, '_blank')}
-                  >
-                    View Project
-                  </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Project Card 1 - Templify (2026 - NEWEST) */}
+            <Link 
+              href="https://templify-eta.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden border border-neutral-800 mb-4">
+                <Image
+                  src="/images/projects/templifyImage.png"
+                  alt="Templify"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                {/* Date stamp */}
+                <div className="absolute top-3 right-3 px-3 py-1 bg-black/80 backdrop-blur-sm text-xs text-neutral-300 uppercase tracking-wider">
+                  2026
                 </div>
               </div>
-            </div>
-          ))}
+              <h4 className="text-xl font-light text-white mb-2 group-hover:text-neutral-300 transition-colors">
+                Templify
+              </h4>
+              <p className="text-sm text-neutral-500 mb-3">
+                Email template generator with customizable designs and export options
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">React</span>
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">TypeScript</span>
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">Next.js</span>
+              </div>
+            </Link>
+
+            {/* Project Card 2 - Truc Viet (2024) */}
+            <Link 
+              href="https://www.trucviet.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden border border-neutral-800 mb-4">
+                <Image
+                  src="/images/projects/trucVietRevamp.png"
+                  alt="Truc Viet Website"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                {/* Date stamp */}
+                <div className="absolute top-3 right-3 px-3 py-1 bg-black/80 backdrop-blur-sm text-xs text-neutral-300 uppercase tracking-wider">
+                  2024
+                </div>
+              </div>
+              <h4 className="text-xl font-light text-white mb-2 group-hover:text-neutral-300 transition-colors">
+                Truc Viet Website Revamp
+              </h4>
+              <p className="text-sm text-neutral-500 mb-3">
+                Nonprofit website redesign and migration to Squarespace
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">Squarespace</span>
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">Web Design</span>
+              </div>
+            </Link>
+
+            {/* Project Card 3 - Hispanic Hackers (2023 - OLDEST) */}
+            <Link href="/projects" className="group">
+              <div className="relative aspect-[4/3] overflow-hidden border border-neutral-800 mb-4">
+                <Image
+                  src="/images/projects/hispanicHackers.png"
+                  alt="Hispanic Hackers"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                {/* Date stamp */}
+                <div className="absolute top-3 right-3 px-3 py-1 bg-black/80 backdrop-blur-sm text-xs text-neutral-300 uppercase tracking-wider">
+                  2023
+                </div>
+              </div>
+              <h4 className="text-xl font-light text-white mb-2 group-hover:text-neutral-300 transition-colors">
+                Hispanic Hackers
+              </h4>
+              <p className="text-sm text-neutral-500 mb-3">
+                Community platform amplifying underrepresented voices in tech
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">Next.js</span>
+                <span className="px-2 py-1 text-xs border border-neutral-800 text-neutral-500">React</span>
+              </div>
+            </Link>
+
+          </div>
         </div>
-      </section>
-    </div>
-  );
+
+      </div>
+    </section>
+  )
 }
+
+export default HomepageProjects;

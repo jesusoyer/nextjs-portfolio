@@ -2,14 +2,14 @@ import '@/styles/globals.css';
 
 // pages/_app.tsx
 import { AppProps } from 'next/app';
-import GlobalNavbar from '@/components/GlobalNavbar'; // Import the global navbar
+import Navigation from '../components/Navigation'; // Import the global navbar
 import Footer from '@/components/Footer'; // Import the footer
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div>
-      {/* Include the Global Navbar */}
-      <GlobalNavbar />
+      
+      <Navigation />
 
       {/* Render the page component */}
       <Component {...pageProps} />
