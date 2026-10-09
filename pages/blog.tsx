@@ -9,25 +9,52 @@ type Article = {
   date: string; // e.g. "February 8, 2026"
   image?: string; // only the featured article needs one
   body: string[]; // paragraphs
+  link?: { label: string; href: string }; // optional link at the end of the article
 };
 
 // First article in the array is always the featured one.
 const articles: Article[] = [
-  {
-    id: "featured-01",
-    category: "Tech",
-    title: "The course that I would recommend to anyone who wants to learn Excel",
-    excerpt:
-      "A short piece on the course that I would recommend to anyone who wants to learn Excel.",
-    author: "Jesus Oyervides Jr.",
-    date: "February 8, 2026",
-    image: "/images/blogImages/excel_course_image.png",
-    body: [
-      "This is the opening paragraph of your featured article — replace it with your real writing. The first letter here gets the drop-cap treatment automatically, so lead with something you like.",
-      "Second paragraph. Keep going as long as the piece needs — the modal scrolls, so there's no length limit here.",
-      "Close it out however you'd like. This whole body array is just a list of paragraphs; add or remove as needed.",
-    ],
+
+
+{
+  id: "featured-01",
+  category: "Tech",
+  title: "From Fear of Formulas to Excel Confidence: My Learning Journey",
+  excerpt:
+    "My experience with Kyle Pew's Microsoft Excel – Excel from Beginner to Advanced course on Udemy.",
+  author: "Jesus Oyervides Jr.",
+  date: "February 8, 2026",
+  image: "/images/blogImages/excel_course_image.png",
+  body: [
+    "Growing up, I always believed you had to be a math whiz or a numbers prodigy to understand Microsoft Excel. Because of my fear of numbers, I often avoided it altogether. The endless cells, complicated formulas, and intimidating spreadsheets seemed to follow me like a ghoul in the night.",
+
+    "However, that perception began to change during my most recent professional role. I frequently encountered workbooks that lacked organization, efficiency, and thoughtful design. It made me wonder whether others, like myself, had simply never explored Excel's full potential.",
+
+    "Naturally, my curiosity got the better of me, and I decided to take matters into my own hands. I was going to learn Microsoft Excel, and I'm glad I did!",
+
+    "Finding the right course wasn't easy. After researching several options, I came across Microsoft Excel – Excel from Beginner to Advanced 2026 by Kyle Pew on Udemy. Looking back, it turned out to be an excellent choice.",
+
+    "What surprised me most was how much my background in JavaScript and front-end web development helped me understand Excel. My familiarity with JavaScript functions, methods, and programming logic made Excel formulas feel surprisingly intuitive. Meanwhile, my experience designing user interfaces translated naturally into creating organized, visually appealing, and user-friendly workbooks.",
+
+    "Learning tools like VLOOKUP and PivotTables completely changed how I approach organizing, analyzing, and presenting data. Discovering Visual Basic for Applications (VBA) opened my eyes to another level of automation, showing me how repetitive tasks could be streamlined through programming.",
+
+    "One of the most exciting aspects of this journey is realizing how much more there is to explore. I plan to expand my programming knowledge by learning Python, and knowing that Excel supports Python integration makes me even more excited about the possibilities.",
+
+    "A major reason I enjoyed this course was Kyle Pew's teaching style. He has a remarkable ability to break down complex Excel concepts into lessons that are easy to understand, follow, and practice. Rather than simply demonstrating features, he provides opportunities to apply what you've learned, making the experience both approachable and rewarding.",
+
+    "What began as an effort to overcome my fear of spreadsheets became an opportunity to connect my technical background with an entirely new set of skills.",
+
+    "If you're just beginning your Excel journey, or you're an experienced user looking to refresh and expand your knowledge, I highly recommend this course.",
+
+    "As for me, those once-terrifying cells and formulas don't seem so frightening anymore. In fact, I'm looking forward to seeing what I can build with them next.",
+  ],
+  link: {
+    label: "Explore Kyle Pew's Microsoft Excel Course on Udemy",
+    href: "https://www.udemy.com/course/microsoft-excel-2013-from-beginner-to-advanced-and-beyond/",
   },
+},
+
+
   {
     id: "article-02",
     category: "Career",
@@ -103,10 +130,10 @@ export default function Blog() {
           {today || "\u00A0"}
         </div>
         <h1 className="text-5xl md:text-7xl font-serif text-burgundy tracking-tight mb-3">
-          The Oyervides Dispatch
+          Personal Blog
         </h1>
         <p className="text-ink/50 font-light italic text-sm">
-          Dispatches on code, clerking, and everything off the clock.
+         My interests, Experiences, and projects I am working towards.
         </p>
       </div>
 
@@ -216,6 +243,19 @@ export default function Blog() {
                 </p>
               ))}
             </div>
+
+            {openArticle.link && (
+              <div className="mt-10 pt-6 border-t border-ink/10">
+                <a
+                  href={openArticle.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm uppercase tracking-widest text-burgundy hover:text-ink transition-colors"
+                >
+                  {openArticle.link.label} ↗
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}

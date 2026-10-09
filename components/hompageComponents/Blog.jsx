@@ -17,23 +17,23 @@ export default function HomepageBlog() {
             Off the Clock, On the Build
           </span>
           <span className="block text-2xl md:text-3xl normal-case text-cream/70 group-hover:text-ink transition-colors">
-            Notes on rebuilding this site, one component at a time.
+             Microsoft Excel - Excel from Beginner to Advanced 2026- Best course to learn Excel effectively
           </span>
         </h2>
 
-        {/* Image */}
-        <div className="relative w-72 h-80 md:w-80 md:h-96 mx-auto mt-12 mb-6 overflow-hidden">
-          <Image
-            src="/images/blogImages/excel_course_image.png"
-            alt="From the blog"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
+      {/* Image */}
+<div className="relative w-72 h-80 md:w-96 mx-auto mt-12 mb-6 overflow-hidden">
+  <Image
+    src="/images/blogImages/excel_course_image.png"
+    alt="From the blog"
+    fill
+    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+  />
+</div>
 
         {/* Caption */}
         <p className="text-sm text-cream/50 tracking-wide">
-          Tech · September 2026
+           Article Click to read. Tech · September 2026
         </p>
       </Link>
     </section>

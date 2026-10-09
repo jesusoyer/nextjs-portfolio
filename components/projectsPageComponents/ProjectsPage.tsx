@@ -3,18 +3,19 @@ import Link from "next/link";
 
 export default function ProjectsPage() {
   const projects = [
-    {
-      id: 1,
-      title: "Clerk Calculator",
-      description: "Web application for court clerks to calculate case dates and deadlines with precision. Automates date calculations based on court rules, reducing errors and saving time.",
-      image: "/images/projects/clerkCalculator.png",
-      tags: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-      liveLink: "https://clerk-calculator.vercel.app/",
-      githubLink: "https://github.com/jesusoyer/Clerk-Calculator",
-      year: "2026",
-      featured: true,
-      comingSoon: false,
-    },
+{
+  id: 1,
+  title: "Clerks Corner",
+  description: "Free suite of browser-based tools for court clerks and legal professionals. Calculates backtime credit, adjusts dates, and formats file stamps to match your office's convention. Everything runs in the browser, so case data never leaves your device.",
+  image: "/images/projects/ClerksCorner_image.png",
+  video: "/videos/clerks_corner_video.mp4",
+  tags: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  liveLink: "https://clerk-calculator.vercel.app/",
+  githubLink: "https://github.com/jesusoyer/Clerk-Calculator",
+  year: "2026",
+  featured: true,
+  comingSoon: false,
+},
     {
       id: 2,
       title: "Templify",

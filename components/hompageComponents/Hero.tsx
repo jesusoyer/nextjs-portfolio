@@ -116,26 +116,70 @@ function FeaturedProjectSlide() {
   );
 }
 
-function ComingSoonSlide({
-  label,
-  title,
-}: {
-  label: string;
-  title: string;
-}) {
+function FeaturedBlogSlide() {
   return (
     <>
       <div className="mb-8">
         <div className="text-xs uppercase tracking-[0.3em] text-cream/60 mb-4">
-          {label}
+          From the Blog
         </div>
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-4 tracking-tight">
-          <span className="font-serif italic">{title}</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-cream mb-4 tracking-tight">
+          From Fear of Formulas to{" "}
+          <span className="font-serif italic">Excel Confidence</span>
         </h2>
         <div className="h-px w-24 bg-cream/30 mb-6"></div>
         <p className="text-lg text-cream/80 leading-relaxed font-light max-w-xl">
-          This section is under construction. Check back soon.
+          My experience with Kyle Pew&apos;s Microsoft Excel – Excel from
+          Beginner to Advanced course on Udemy.
         </p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link
+          href="/blog"
+          className="px-8 py-4 bg-cream text-burgundy font-light uppercase tracking-wider text-sm hover:bg-white transition-all text-center"
+        >
+          Read the Article
+        </Link>
+      </div>
+    </>
+  );
+}
+
+// Edit this object to change the featured book.
+const featuredBook = {
+  title: "The Social Animal",
+  author: "David Brooks",
+  blurb:
+    "The book that changed the course of my understanding of human behavior. Helping me unlock into my own potential.",
+};
+
+function FeaturedBookSlide() {
+  return (
+    <>
+      <div className="mb-8">
+        <div className="text-xs uppercase tracking-[0.3em] text-cream/60 mb-4">
+          Book Recommendation
+        </div>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-3 tracking-tight">
+          <span className="font-serif italic">{featuredBook.title}</span>
+        </h2>
+        <p className="text-sm uppercase tracking-widest text-cream/60 mb-4">
+          by {featuredBook.author}
+        </p>
+        <div className="h-px w-24 bg-cream/30 mb-6"></div>
+        <p className="text-lg text-cream/80 leading-relaxed font-light max-w-xl">
+          {featuredBook.blurb}
+        </p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link
+          href="/books"
+          className="px-8 py-4 bg-cream text-burgundy font-light uppercase tracking-wider text-sm hover:bg-white transition-all text-center"
+        >
+          See the Shelf
+        </Link>
       </div>
     </>
   );
@@ -144,24 +188,21 @@ function ComingSoonSlide({
 const slides: Slide[] = [
   { id: "casual", kicker: "Intro", render: CasualInfoSlide },
   { id: "project", kicker: "Work", render: FeaturedProjectSlide },
-  {
-    id: "blog",
-    kicker: "Writing",
-    render: () => <ComingSoonSlide label="Blog" title="Coming Soon" />,
-  },
-  {
-    id: "books",
-    kicker: "Reading",
-    render: () => (
-      <ComingSoonSlide label="Book Recommendation" title="Coming Soon" />
-    ),
-  },
+  { id: "blog", kicker: "Writing", render: FeaturedBlogSlide },
+  { id: "books", kicker: "Reading", render: FeaturedBookSlide },
 ];
 
 const backgroundImageBySlide: Record<string, string> = {
   casual: "/images/profileImages/aztecMexicanImage.jpg",
-  blog: "/images/heroImages/books_reference.png",
-  books: "/images/heroImages/bookshelf_image_1.png",
+  blog: "/images/blogImages/excel_course_image.png",
+  books: "/images/bookImages/TheSocialAnimal.jpg",
+};
+
+// Which part of each image stays visible when it's cropped to fit.
+const objectPositionBySlide: Record<string, string> = {
+  casual: "left 10%",
+  blog: "center top",
+  books: "center",
 };
 
 const AUTO_ADVANCE_MS = 7000;
@@ -210,7 +251,10 @@ export default function Hero() {
             src={backgroundImageBySlide[slides[activeIndex].id]}
             alt="Jesus Oyervides Jr"
             fill
-            style={{ objectFit: "cover", objectPosition: "left 10%" }}
+            style={{
+              objectFit: "cover",
+              objectPosition: objectPositionBySlide[slides[activeIndex].id],
+            }}
             className="opacity-90"
             priority
           />
