@@ -64,15 +64,15 @@ const ContactSection = () => {
   return (
     <div className="bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="border-b border-neutral-800 py-20 px-6">
+      <section className="border-b border-cream/10 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-4">
+          <div className="text-xs uppercase tracking-[0.3em] text-cream/50 mb-4">
             Get In Touch
           </div>
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-light text-burgundy-light mb-6">
             Let's Work Together
           </h1>
-          <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-xl text-cream/70 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Drop me a message and I'll get back to you as soon as possible.
           </p>
         </div>
@@ -94,61 +94,61 @@ const ContactSection = () => {
                     alt="Jesus Oyervides Jr"
                     width={300}
                     height={300}
-                    className="rounded-lg border-2 border-neutral-800"
+                    className="rounded-lg border-2 border-cream/10"
                   />
                   {/* Subtle glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 blur-2xl -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-burgundy/10 to-burgundy-light/10 blur-2xl -z-10"></div>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-light text-white mb-8">Connect With Me</h2>
+              <h2 className="text-3xl font-light text-burgundy-light mb-8">Connect With Me</h2>
               
               {/* Contact Info */}
               <div className="space-y-6 mb-12">
                 {/* Location */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-cream/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm text-neutral-500">Location</div>
-                    <div className="text-neutral-300 font-light">Austin, Texas</div>
+                    <div className="text-sm text-cream/40">Location</div>
+                    <div className="text-cream/80 font-light">Austin, Texas</div>
                   </div>
                 </div>
 
                 {/* Email */}
                 <Link
                   href="mailto:jesusoyervidesinfo@gmail.com"
-                  className="group flex items-start gap-4 text-neutral-400 hover:text-white transition-colors"
+                  className="group flex items-start gap-4 text-cream/70 hover:text-burgundy-light transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center group-hover:border-white transition-colors flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center group-hover:border-burgundy-light transition-colors flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm text-neutral-500">Email</div>
+                    <div className="text-sm text-cream/40">Email</div>
                     <div className="font-light break-all">jesusoyervidesinfo@gmail.com</div>
                   </div>
                 </Link>
 
                 {/* Resumes */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-cream/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm text-neutral-500 mb-2">Resume</div>
+                    <div className="text-sm text-cream/40 mb-2">Resume</div>
                     <Link
                       href="https://docs.google.com/document/d/1ZS_IKHy4hCqbDgvm92PGjnfu6s2zv-y4Zl4DM9A9784/edit?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-400 hover:text-white transition-colors text-sm block mb-1"
+                      className="text-cream/70 hover:text-burgundy-light transition-colors text-sm block mb-1"
                     >
                       Developer Resume →
                     </Link>
@@ -156,7 +156,7 @@ const ContactSection = () => {
                       href="https://docs.google.com/document/d/1pznuI-HdsKCs_94g2apFyzqPDqZjtiJbUFGgkA-OfdE/edit?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-neutral-400 hover:text-white transition-colors text-sm block"
+                      className="text-cream/70 hover:text-burgundy-light transition-colors text-sm block"
                     >
                       Professional Resume →
                     </Link>
@@ -166,7 +166,7 @@ const ContactSection = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-neutral-500 mb-6">
+                <h3 className="text-sm uppercase tracking-wider text-cream/40 mb-6">
                   Follow Me
                 </h3>
                 <div className="flex gap-4">
@@ -174,7 +174,7 @@ const ContactSection = () => {
                     href="https://www.linkedin.com/in/jesus-oyervides-jr/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-colors"
+                    className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center text-cream/60 hover:text-burgundy-light hover:border-burgundy-light transition-colors"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -186,7 +186,7 @@ const ContactSection = () => {
                     href="https://github.com/jesusoyer"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-colors"
+                    className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center text-cream/60 hover:text-burgundy-light hover:border-burgundy-light transition-colors"
                     aria-label="GitHub"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -198,7 +198,7 @@ const ContactSection = () => {
                     href="https://www.facebook.com/profile.php?id=100093627480196"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-colors"
+                    className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center text-cream/60 hover:text-burgundy-light hover:border-burgundy-light transition-colors"
                     aria-label="Facebook"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -211,13 +211,13 @@ const ContactSection = () => {
 
             {/* Right - Contact Form */}
             <div>
-              <div className="bg-neutral-900 border border-neutral-800 p-8">
-                <h2 className="text-2xl font-light text-white mb-6">Send a Message</h2>
+              <div className="bg-white/5 border border-cream/10 p-8">
+                <h2 className="text-2xl font-light text-burgundy-light mb-6">Send a Message</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Input */}
                   <div>
-                    <label htmlFor="name" className="block text-sm text-neutral-400 mb-2">
+                    <label htmlFor="name" className="block text-sm text-cream/60 mb-2">
                       Name
                     </label>
                     <input
@@ -227,14 +227,14 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black border border-neutral-700 text-white px-4 py-3 focus:outline-none focus:border-white transition-colors"
+                      className="w-full bg-black border border-cream/20 text-cream px-4 py-3 focus:outline-none focus:border-burgundy-light transition-colors"
                       placeholder="Your name"
                     />
                   </div>
 
                   {/* Email Input */}
                   <div>
-                    <label htmlFor="email" className="block text-sm text-neutral-400 mb-2">
+                    <label htmlFor="email" className="block text-sm text-cream/60 mb-2">
                       Email
                     </label>
                     <input
@@ -244,14 +244,14 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black border border-neutral-700 text-white px-4 py-3 focus:outline-none focus:border-white transition-colors"
+                      className="w-full bg-black border border-cream/20 text-cream px-4 py-3 focus:outline-none focus:border-burgundy-light transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   {/* Message Input */}
                   <div>
-                    <label htmlFor="message" className="block text-sm text-neutral-400 mb-2">
+                    <label htmlFor="message" className="block text-sm text-cream/60 mb-2">
                       Message
                     </label>
                     <textarea
@@ -261,7 +261,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full bg-black border border-neutral-700 text-white px-4 py-3 focus:outline-none focus:border-white transition-colors resize-none"
+                      className="w-full bg-black border border-cream/20 text-cream px-4 py-3 focus:outline-none focus:border-burgundy-light transition-colors resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -270,7 +270,7 @@ const ContactSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-white text-black py-4 font-light uppercase tracking-wider text-sm hover:bg-neutral-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-burgundy text-cream py-4 font-light uppercase tracking-wider text-sm hover:bg-burgundy-light transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>

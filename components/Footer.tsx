@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-neutral-800">
+    <footer className="relative bg-black border-t border-neutral-800">
+      {/* Pinstripe divider */}
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-cream" />
+
       <div className="max-w-7xl mx-auto px-6 py-16">
         
         {/* Top Section - Navigation & Socials */}
@@ -34,6 +37,24 @@ export default function Footer() {
                 className="text-neutral-400 hover:text-white transition-colors text-sm"
               >
                 Gallery
+              </Link>
+              <Link
+                href="/blog"
+                className="text-neutral-400 hover:text-white transition-colors text-sm"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/off-the-clock"
+                className="text-neutral-400 hover:text-white transition-colors text-sm"
+              >
+                Off the Clock
+              </Link>
+              <Link
+                href="/books"
+                className="text-neutral-400 hover:text-white transition-colors text-sm"
+              >
+                Books
               </Link>
               <Link
                 href="/contact"
