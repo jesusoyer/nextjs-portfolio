@@ -3,6 +3,18 @@ import Link from "next/link";
 
 export default function ProjectsPage() {
   const projects = [
+// Newest first: the first two featured projects fill the Featured row (left, right).
+{
+  id: 7,
+  title: "Cloud Resume Challenge",
+  description: "My resume, built and hosted on AWS as part of the Cloud Resume Challenge. A hand-coded HTML and CSS site served from an S3 bucket, with the code versioned in GitHub.",
+  image: "/images/projects/cloud_resume.png", // TODO: add this screenshot to /public/images/projects/
+  tags: ["AWS", "S3", "HTML", "CSS"],
+  liveLink: "http://jesus-oyervides-cloud-resume.s3-website.us-east-2.amazonaws.com/",
+  year: "2026",
+  featured: true,
+  comingSoon: false,
+},
 {
   id: 1,
   title: "Clerks Corner",
@@ -25,7 +37,7 @@ export default function ProjectsPage() {
       liveLink: "https://templify-eta.vercel.app/",
       githubLink: "https://github.com/jesusoyer/templify",
       year: "2026",
-      featured: true,
+      featured: false,
       comingSoon: false,
     },
     {

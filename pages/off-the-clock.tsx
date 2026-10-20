@@ -1,48 +1,6 @@
 import Image from "next/image";
-
-type Entry = {
-  id: string;
-  date: string; // e.g. "Feb 2026"
-  category: string; // e.g. "Reading", "Pickleball", "Cooking"
-  title: string;
-  blurb: string;
-  imageSrc: string; // TODO: replace with real image paths in /public/images/offTheClock/
-  orientation: "portrait" | "landscape";
-};
-
-// Add new posts here — newest first. Each one becomes a section below.
-const entries: Entry[] = [
-  {
-    id: "reading-01",
-    date: "Feb 2026",
-    category: "Reading",
-    title: "Coming Soon",
-    blurb:
-      "Coming Soon",
-    imageSrc: "/images/offTheClock/bookshelf_image_2.png",
-    orientation: "portrait",
-  },
-  {
-    id: "pickleball-01",
-    date: "Jan 2026",
-    category: "Pickleball",
-    title: "Coming Soon",
-    blurb:
-      "Coming soon",
-    imageSrc: "/images/offTheClock/pickleballImage.png",
-    orientation: "landscape",
-  },
-  {
-    id: "misc-01",
-    date: "Dec 2025",
-    category: "Currently Into",
-    title: "Dora, The Ideal World. Blind Boxes",
-    blurb:
-      "Thes highly detailed blind boxes are a fun way to collect.ite, with its unique designs and vibrant colors.",
-    imageSrc: "/images/offTheClock/doraPrideImage.png",
-    orientation: "portrait",
-  },
-];
+import Link from "next/link";
+import { entries } from "@/data/offTheClock";
 
 export default function OffTheClock() {
   return (
@@ -66,6 +24,8 @@ export default function OffTheClock() {
       <div className="max-w-5xl mx-auto px-6 divide-y divide-cream/10">
         {entries.map((entry, i) => {
           const imageFirst = i % 2 === 0;
+          // Only entries that have an article body link to a page.
+          const href = entry.body ? `/off-the-clock/${entry.slug}` : null;
           return (
             <article
               key={entry.id}
@@ -73,7 +33,7 @@ export default function OffTheClock() {
             >
               {/* Image */}
               <div
-                className={`relative ${
+                className={`group relative overflow-hidden ${
                   entry.orientation === "portrait"
                     ? "aspect-[3/4]"
                     : "aspect-[4/3]"
@@ -85,11 +45,22 @@ export default function OffTheClock() {
                   src={entry.imageSrc}
                   alt={entry.title}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${
+                    href
+                      ? "transition-transform duration-500 group-hover:scale-105"
+                      : ""
+                  }`}
                 />
                 <div className="absolute top-3 left-3 px-3 py-1 bg-black/80 backdrop-blur-sm text-[10px] text-cream/90 uppercase tracking-widest">
                   {entry.date}
                 </div>
+                {href && (
+                  <Link
+                    href={href}
+                    aria-label={`Read ${entry.title}`}
+                    className="absolute inset-0 z-10"
+                  />
+                )}
               </div>
 
               {/* Text */}
@@ -98,11 +69,28 @@ export default function OffTheClock() {
                   {entry.category}
                 </div>
                 <h2 className="text-3xl md:text-4xl font-serif italic text-cream mb-5 leading-tight">
-                  {entry.title}
+                  {href ? (
+                    <Link
+                      href={href}
+                      className="hover:text-white transition-colors"
+                    >
+                      {entry.title}
+                    </Link>
+                  ) : (
+                    entry.title
+                  )}
                 </h2>
                 <p className="text-cream/80 font-light leading-relaxed max-w-md">
                   {entry.blurb}
                 </p>
+                {href && (
+                  <Link
+                    href={href}
+                    className="inline-block mt-6 text-xs uppercase tracking-widest text-cream/70 hover:text-cream border-b border-cream/30 hover:border-cream pb-0.5 transition-colors"
+                  >
+                    Read More →
+                  </Link>
+                )}
               </div>
             </article>
           );

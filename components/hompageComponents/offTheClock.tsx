@@ -18,10 +18,10 @@ const hobbies: Hobby[] = [
     image: "/images/offTheClock/pickleballImage.png",
   },
   {
-    id: "reading",
-    name: "Reading",
-    blurb: "Who doesn't like reading books?.",
-    image: "/images/offTheClock/bookshelf_image_2.png",
+    id: "Bookclub",
+    name: "Bookclub",
+    blurb: "Discussing literature with fellow book lovers.",
+    image: "/images/bookclubImages/molka.png",
   },
   {
     id: "hiking",

@@ -185,9 +185,48 @@ function FeaturedBookSlide() {
   );
 }
 
+// Live URL of the S3-hosted cloud resume.
+const CLOUD_RESUME_URL = "http://jesus-oyervides-cloud-resume.s3-website.us-east-2.amazonaws.com/";
+
+function CloudResumeSlide() {
+  return (
+    <>
+      <div className="mb-8">
+        <div className="text-xs uppercase tracking-[0.3em] text-cream/60 mb-4">
+          Cloud Project
+        </div>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-cream mb-4 tracking-tight">
+          Cloud Resume
+          <br />
+          <span className="font-serif italic">Challenge</span>
+        </h2>
+        <div className="h-px w-24 bg-cream/30 mb-6"></div>
+        <p className="text-lg text-cream/80 leading-relaxed font-light max-w-xl">
+          My resume, built and hosted on AWS as part of the Cloud Resume
+          Challenge. A hand-coded HTML and CSS site served from S3, with the
+          code versioned in GitHub — proof that I can ship and run something
+          in the cloud, not just write about it.
+        </p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <a
+          href={CLOUD_RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 bg-cream text-burgundy font-light uppercase tracking-wider text-sm hover:bg-white transition-all text-center"
+        >
+          View My Cloud Resume ↗
+        </a>
+      </div>
+    </>
+  );
+}
+
 const slides: Slide[] = [
   { id: "casual", kicker: "Intro", render: CasualInfoSlide },
   { id: "project", kicker: "Work", render: FeaturedProjectSlide },
+  { id: "cloud", kicker: "Cloud", render: CloudResumeSlide },
   { id: "blog", kicker: "Writing", render: FeaturedBlogSlide },
   { id: "books", kicker: "Reading", render: FeaturedBookSlide },
 ];
@@ -196,6 +235,12 @@ const backgroundImageBySlide: Record<string, string> = {
   casual: "/images/profileImages/aztecMexicanImage.jpg",
   blog: "/images/blogImages/excel_course_image.png",
   books: "/images/bookImages/TheSocialAnimal.jpg",
+};
+
+// Slides that play a video instead of showing an image.
+const videoBySlide: Record<string, string> = {
+  project: "/videos/clerks_corner_video.mp4",
+  cloud: "/videos/cloud_Resume.mp4",
 };
 
 // Which part of each image stays visible when it's cropped to fit.
@@ -234,16 +279,19 @@ export default function Hero() {
     >
       {/* Background Image / Video - Left Side */}
       <div className="absolute inset-0 md:w-1/2">
-        {slides[activeIndex].id === "project" ? (
+        {videoBySlide[slides[activeIndex].id] ? (
           <video
-            key="project-video"
+            key={videoBySlide[slides[activeIndex].id]}
             autoPlay
             muted
             loop
             playsInline
             className="absolute inset-0 w-full h-full object-cover opacity-90"
           >
-            <source src="/videos/clerks_corner_video.mp4" type="video/mp4" />
+            <source
+              src={videoBySlide[slides[activeIndex].id]}
+              type="video/mp4"
+            />
           </video>
         ) : (
           <Image

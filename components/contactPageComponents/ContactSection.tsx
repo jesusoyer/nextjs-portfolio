@@ -144,21 +144,14 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-cream/40 mb-2">Resume</div>
+                   
                     <Link
-                      href="https://docs.google.com/document/d/1ZS_IKHy4hCqbDgvm92PGjnfu6s2zv-y4Zl4DM9A9784/edit?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cream/70 hover:text-burgundy-light transition-colors text-sm block mb-1"
-                    >
-                      Developer Resume →
-                    </Link>
-                    <Link
-                      href="https://docs.google.com/document/d/1pznuI-HdsKCs_94g2apFyzqPDqZjtiJbUFGgkA-OfdE/edit?usp=sharing"
+                      href="http://jesus-oyervides-cloud-resume.s3-website.us-east-2.amazonaws.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-cream/70 hover:text-burgundy-light transition-colors text-sm block"
                     >
-                      Professional Resume →
+                      Professional Cloud Resume →
                     </Link>
                   </div>
                 </div>
